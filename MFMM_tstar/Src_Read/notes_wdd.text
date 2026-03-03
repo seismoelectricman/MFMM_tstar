@@ -1,0 +1,23 @@
+This text is used to record the process for reading the fast marching method.  --- 2024-10-26
+
+1. The code 'read_parafile.cpp'.
+
+This code is used to read some parameters such as the dimension of the grid, the number of grid in x, y and z directions,
+and so on.
+
+
+2. The code 'source_load.cpp' - SourcePoints
+
+Read the source index (number), and its coordinates in 3D, x, y, and z coordinates.
+This code can be used to read lots of source informations. The final parameter is written as 'SourcePoints'.
+
+3. The code 'receiver_load.cpp' - ReceiverPoints
+
+Read the receiver informations. Pay attenuation to that this code can be used to read lots of receivers for all the sources.
+To distinguish which knids of the receivers belong to specified source. Here we use the the parameter 'sourceIndex' in the parameter
+'ReceiverPoints' to distinguish it.  -wdd
+
+4. The code 'vel_model_load.cpp'
+
+Read the velocity model. Here we don't koow the number of the grid (nx, ny, nz) in 3 dimensions.
+And just save it as the index number 1, 2, 3, ... nx*ny*nz.

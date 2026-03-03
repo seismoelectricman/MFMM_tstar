@@ -1,0 +1,15 @@
+#!python
+
+#Program('eikonal2DTest', ['eikonal2DTest.cpp', 'eikonal.cpp'], CPPFLAGS='-O2')
+
+#Program('eikonal3DTest', ['eikonal3DTest.cpp', 'eikonal.cpp'], CPPFLAGS='-O2')
+#env = Environment(CCFLAGS='-O3')
+
+env = Environment(CPPFLAGS='-O3')
+env.Append( CPPFLAGS  = ' -fopenmp' )
+env.Append(LINKFLAGS = ['-fopenmp'])
+
+env.Program('main', ['./Src_Read/main.cpp', './Src_Read/eikonal.cpp', './Src_Read/read_parafile.cpp', './Src_Read/vel_model_load.cpp', './Src_Read/att_model_load.cpp', './Src_Read/source_load.cpp', './Src_Read/receiver_load.cpp', './Src_read/raytracing.cpp'], CPPFLAGS='-std=c++0x -fopenmp', std="c++11")
+
+
+Clean('./', ['timeMap2D.txt', 'timeMap3D.txt'])
