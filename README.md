@@ -71,7 +71,7 @@ The main source files are located in the folder `Src_Read`.
   Reads parameters required for the calculation.
 
 - **eikonal.cpp**  
-  Implements the fast marching algorithm and computes the traveltime and \(t^*\).
+  Implements the fast marching algorithm and computes the traveltime t and attenuation operator t*.
 
 - **main.cpp**  
   Main driver program combining all modules.
@@ -87,4 +87,4 @@ When using this package, several parameters in main.cpp may need to be modified 
   Determines whether cross derivatives are used. It is recommended to keep this parameter set to false.
 
 - **output_ts = true**  
-  Determines whether the traveltime field and the attenuation operator t* are written to output files.
+  Determines whether the traveltime field and the attenuation operator t* field are written to output files.
